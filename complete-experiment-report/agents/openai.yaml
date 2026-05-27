@@ -1,0 +1,4 @@
+interface:
+  display_name: "完成实验报告"
+  short_description: "严格基于教师模板完成可提交实验报告，并生成截图、代码定位与补充事项清单"
+  default_prompt: "Use $complete-experiment-report to complete my experiment report from the provided template and create a Markdown screenshot checklist."
