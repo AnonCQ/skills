@@ -1,13 +1,13 @@
 ---
 name: complete-experiment-report
-description: Complete course experiment or lab reports from teacher-provided templates while preserving the required layout, creating submission-ready report content, marking missing screenshots with meaningful Chinese bracket captions, and delivering a separate Markdown completion guide. Use when writing, filling, revising, or finalizing an experiment report, lab report, practical assignment report, or course design report from a DOCX/PDF/other supplied template and project materials.
+description: Complete course experiment or lab reports from teacher-provided templates by backing up the original file, editing the original report/template in place, preserving already-filled content and required layout, replacing only missing or placeholder content, marking missing screenshots with meaningful Chinese bracket captions, and delivering a separate Markdown completion guide. Use when writing, filling, revising, or finalizing an experiment report, lab report, practical assignment report, or course design report from a DOCX/PDF/other supplied template and project materials.
 ---
 
 # Complete Experiment Report
 
 ## Purpose
 
-Produce a report that the user can submit after adding any unavailable evidence. Treat the teacher's template as a formatting constraint, not as inspiration for a newly generated document. Keep operational guidance out of the report and place it in a separate Markdown guide.
+Produce a report that the user can submit after adding any unavailable evidence. After creating an untouched backup, edit the original report/template file in place instead of generating a new document. Treat existing filled content and formatting as authoritative unless it is clearly a placeholder that must be replaced. Keep operational guidance out of the report and place it in a separate Markdown guide.
 
 ## Required Inputs
 
@@ -22,25 +22,27 @@ Do not invent experimental results, screenshots, measurements, environment versi
 
 ## Workflow
 
-### 1. Preserve the template
+### 1. Back up, analyze, then edit in place
 
 1. Identify the authoritative teacher-provided template.
-2. Create an untouched backup copy before editing.
-3. Create the completed-report file by copying the template itself, or edit the working copy after the untouched backup exists.
-4. Modify content in the template-based file; do not recreate the report as a fresh document unless the user explicitly requests a redesign.
+2. Create an untouched backup copy before editing, preferably next to the original with a clear suffix such as `-backup` or `-原始备份`.
+3. Analyze the document before writing: distinguish content that is already filled correctly from blanks, prompts, `xxx`, sample answers, placeholder images, empty tables, and sections that requirements show must be completed.
+4. Edit the original report/template file in place after the backup exists. Do not create a separate completed-report copy unless the user explicitly asks for one.
+5. Fill or replace only the areas identified as missing, placeholder, or required-by-assignment. Do not delete, rewrite, reorder, or restyle already-filled content merely to improve it.
 
-Keep the supplied layout intact: cover, headers and footers, page numbering, school/course marks, section ordering, heading styles, fonts, spacing, tables, borders, captions, and required blank fields. Replace placeholders such as `xxx`, prompts, sample paragraphs, blank answer cells, and example text in place.
+Keep the supplied layout intact: cover, headers and footers, page numbering, school/course marks, section ordering, heading styles, fonts, spacing, tables, borders, captions, and required blank fields. Replace placeholders such as `xxx`, prompts, sample paragraphs, blank answer cells, and example text in place, but leave genuine completed content untouched.
 
 If the template format cannot be edited directly, explain the limitation in the Markdown guide and use the closest format-preserving method available.
 
 ### 2. Write only submit-ready report content
 
-Fill the sections actually required by the template, such as purpose, environment, principle, procedure, implementation, test data, results, analysis, and summary.
+Fill only the sections or fields that are actually missing or must be replaced under the assignment requirements, such as purpose, environment, principle, procedure, implementation, test data, results, analysis, and summary. Preserve already-filled sections even if they are stylistically imperfect, unless they conflict with the assignment or the user asks for revision.
 
 Write in formal report voice. The report must not contain assistant-to-user commentary such as:
 
 - "请自行修改" or "以下是为你生成的内容".
 - Chat-style explanations, workflow notes, confidence disclaimers, or AI references.
+- Internal analysis of what was already filled, what needed replacement, or what editing steps were taken.
 - Instructions for finding files or taking screenshots, except the formal screenshot caption placeholders defined below.
 
 When evidence is missing, write supported prose only and leave an explicit evidence placeholder rather than fabricating content.
@@ -118,9 +120,11 @@ Check both artifacts before reporting completion:
 
 - The final report still derives from the supplied template and preserves required formatting.
 - The untouched backup exists when an editable template was modified.
+- The original report/template file, not a regenerated replacement, was edited in place unless the user requested otherwise.
+- Already-filled content remains intact except for clearly required replacements.
 - Template placeholders, sample answers, and prompt text are either filled or called out in the guide.
 - All unavailable screenshots use specific `【截图：...】` captions at the correct positions.
-- No user-facing operational explanation appears in the report body.
+- No user-facing operational explanation, workflow description, or fill-analysis notes appear in the report body.
 - Unsupported claims and fabricated evidence are absent.
 - The Markdown guide lists remaining screenshot work, code locations, redaction needs, and unresolved fields succinctly.
 - Output names and required identity fields conform to the assignment where known.
