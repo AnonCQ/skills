@@ -1,4 +1,5 @@
 interface:
-  display_name: "完成实验报告"
-  short_description: "备份后就地填写教师模板，只替换待填内容并生成截图与代码补充清单"
-  default_prompt: "Use $complete-experiment-report to complete my experiment report from the provided template and create a Markdown screenshot checklist."
+  display_name: "实验报告与交付"
+  short_description: "盘点任务材料、完成实验，并按教师模板交付图文并茂的报告"
+  default_prompt: "Use $complete-experiment-report to inspect the assignment folder, complete the experiment, and fill the report template with verified results and visuals."
+
