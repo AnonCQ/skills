@@ -26,18 +26,19 @@ Start from the task folder, determine the full assignment, complete the required
 ## 3. Collect and place visual evidence
 
 - Prefer images naturally exported during execution, such as plots, diagrams, program output images, or saved result charts. Generate charts from real experiment data and keep their source data or generation code when required.
-- Use an actual application screenshot only when the assignment requires visible UI evidence or no suitable exported image exists. Do not use screenshot placeholders or invented/composited evidence.
+- Use a real application screenshot only when the assignment requires visible UI evidence and no suitable exported image exists. Do not use screenshot placeholders or invented/composited evidence. Do not use Computer Use or UI automation to author documents or collect screenshots.
 - Place each figure next to the paragraph or step it supports. Keep explanatory text and its image together; avoid long blocks of prose followed by an unrelated image gallery. Follow the template's figure numbering, caption, and sizing conventions.
-- If a required screenshot can be captured through available UI automation, capture the real scene. If it genuinely requires the user, do not put a placeholder in the report; explain in the final conversation exactly how to reproduce the scene and provide the command when applicable. Avoid manual screenshot requests whenever a genuine exported visual will satisfy the requirement.
+- If a required screenshot genuinely needs manual UI capture, do not put a placeholder in the report. Explain the exact reproduction steps and command, when applicable, in the final conversation. Avoid requesting manual screenshots when a genuine exported visual satisfies the requirement.
 
 ## 4. Complete the report from its template
 
 Write the report after the experiment results and evidence have been verified.
 
+- Prefer LibreOffice for reading, editing, converting, and exporting report documents. Use its headless command line or UNO API where practical; use another direct file/API document tool only when LibreOffice cannot support the required format or preserve the template. Do not use Computer Use for document editing.
 - Read the report/template and distinguish completed content from blanks, prompts, `xxx`, examples, and content explicitly required by the assignment.
 - Create an untouched backup before modifying the source report or template. Use a clear backup name and do not overwrite an existing backup.
 - For a `.docx` report/template, edit that file in place after the backup exists. Fill or replace only missing, placeholder, or explicitly incorrect content. Preserve valid completed content, document structure, styles, page layout, headers, footers, tables, and existing figures.
-- For a legacy `.doc` template, preserve the original `.doc` as the backup, convert it to `.docx`, edit the converted document, and deliver the final report as `.docx`. Check the converted layout and repair only conversion damage needed to retain the template's intended formatting.
+- For a legacy `.doc` template, preserve the original `.doc` as the backup, convert it to `.docx` with LibreOffice, edit the converted document, and deliver the final report as `.docx`. Prefer headless conversion, for example: `soffice --headless --convert-to docx --outdir "<output-folder>" "<template.doc>"`. Check the converted layout and repair only conversion damage needed to retain the template's intended formatting.
 - For other template formats, use an editable, format-preserving workflow appropriate to the format and assignment. Do not recreate the document from scratch when the supplied template can be edited.
 - Integrate actual relevant figures into the corresponding report sections. Do not insert screenshot placeholders, and do not append all images after the report narrative.
 - Keep the report submission-ready. Do not include assistant commentary, internal analysis, editing steps, or the agent's workflow in the report.
@@ -46,6 +47,6 @@ Write the report after the experiment results and evidence have been verified.
 
 - Confirm each explicit requirement has a corresponding completed artifact or evidence.
 - Check that report claims match executed results and source data, required figures appear beside the relevant text, and no placeholder text or fabricated evidence remains.
-- Check the report opens and its layout remains consistent with the template, including after `.doc` conversion. Confirm the untouched backup exists.
+- Check the report opens and its layout remains consistent with the template, including after `.doc` conversion. Prefer LibreOffice export or other non-UI checks; do not use Computer Use.
 - Deliver only the requested artifacts. In the final conversation, list their paths and briefly summarize completion. Give reproduction steps and commands only for genuinely required screenshots the user must capture manually. Do not create a separate explanation or handoff document unless requested.
 
