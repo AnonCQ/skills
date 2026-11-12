@@ -34,11 +34,12 @@ Start from the task folder, determine the full assignment, complete the required
 
 Write the report after the experiment results and evidence have been verified.
 
+- On this computer, use the verified LibreOffice command-line executable `D:\LibreOffice\program\soffice.com` (version 26.8.2.2). In PowerShell, invoke it with the call operator `&`. If that path is unavailable in another environment, locate that environment's LibreOffice executable and keep using LibreOffice.
 - Prefer LibreOffice for reading, editing, converting, and exporting report documents. Use its headless command line or UNO API where practical; use another direct file/API document tool only when LibreOffice cannot support the required format or preserve the template. Do not use Computer Use for document editing.
 - Read the report/template and distinguish completed content from blanks, prompts, `xxx`, examples, and content explicitly required by the assignment.
 - Create an untouched backup before modifying the source report or template. Use a clear backup name and do not overwrite an existing backup.
 - For a `.docx` report/template, edit that file in place after the backup exists. Fill or replace only missing, placeholder, or explicitly incorrect content. Preserve valid completed content, document structure, styles, page layout, headers, footers, tables, and existing figures.
-- For a legacy `.doc` template, preserve the original `.doc` as the backup, convert it to `.docx` with LibreOffice, edit the converted document, and deliver the final report as `.docx`. Prefer headless conversion, for example: `soffice --headless --convert-to docx --outdir "<output-folder>" "<template.doc>"`. Check the converted layout and repair only conversion damage needed to retain the template's intended formatting.
+- For a legacy `.doc` template, preserve the original `.doc` as the backup, convert it to `.docx` with LibreOffice, edit the converted document, and deliver the final report as `.docx`. Prefer headless conversion, for example: `& 'D:\LibreOffice\program\soffice.com' --headless --convert-to docx --outdir "<output-folder>" "<template.doc>"`. Check the converted layout and repair only conversion damage needed to retain the template's intended formatting.
 - For other template formats, use an editable, format-preserving workflow appropriate to the format and assignment. Do not recreate the document from scratch when the supplied template can be edited.
 - Integrate actual relevant figures into the corresponding report sections. Do not insert screenshot placeholders, and do not append all images after the report narrative.
 - Keep the report submission-ready. Do not include assistant commentary, internal analysis, editing steps, or the agent's workflow in the report.
